@@ -1,0 +1,30 @@
+{
+  "name": "ngBgloader",
+  "authors": [
+    "Pushkar Anand <pushkar8723@gmail.com>"
+  ],
+  "description": "Angular module to load background images asynchronously while showing a placeholder image. When background image loads, it fades in, giving page more readability while loading.",
+  "main": "ngbgloader.js",
+  "moduleType": [],
+  "keywords": [
+    "Angular",
+    "background",
+    "image",
+    "loader",
+    "background",
+    "effects"
+  ],
+  "license": "MIT",
+  "homepage": "http://pushkar8723.github.io/ngbgloader",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ngAnimate": "*",
+    "angular": "~1.5.6"
+  }
+}
