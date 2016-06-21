@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Background Loader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            color: #2d3d4b;
+        }
+    </style>
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+</head>
+<body ng-app="demoApp" ng-cloak>
+    <md-content>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2 style="text-align: center; width: 100%; color: #2d3d4b;">
+                    Angular Background Loader - Demo
+                </h2>
+            </div>
+        </md-toolbar>
+        <div style="height: 350px;">
+            <bg-loader
+                placeholder=""
+                src="'images/3330x1410-developer-hero.gif'"
+            ></bg-loader>
+        </div>
+    </md-content>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+    <script src="src/ngbgloader.js"></script>
+    <script type="text/javascript">
+        var demoApp = angular.module('demoApp', ['ngMaterial', 'ngBgloader']);
+
+        demoApp.config(['$mdThemingProvider', function($mdThemingProvider) {
+
+            $mdThemingProvider.definePalette('demoPalette', {
+                '50': 'ffebee',
+                '100': '28c1c8',
+                '200': 'ef9a9a',
+                '300': 'e57373',
+                '400': 'ef5350',
+                '500': 'd6e1aa',
+                '600': 'e53935',
+                '700': 'd32f2f',
+                '800': 'c62828',
+                '900': 'b71c1c',
+                'A100': 'ff8a80',
+                'A200': 'ff5252',
+                'A400': 'ff1744',
+                'A700': 'd50000',
+                'contrastDefaultColor': 'light',
+                'contrastDarkColors': ['50', '100', '200', '300', '400', 'A100'],
+                'contrastLightColors': undefined
+            });
+            $mdThemingProvider.theme('default').primaryPalette('demoPalette')
+        }])
+    </script>
+
+</body>
+</html>
