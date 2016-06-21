@@ -1,3 +1,6 @@
+/**
+ * Created by pushkar on 6/21/16.
+ */
 (function () {
     'use-strict';
 
@@ -7,16 +10,19 @@
             scope: {
                 placeholder: '=placeholder',
                 src: '=src',
-                givenStyles: '=?styles'
+                givenStyles: '=?styles',
+                placeholderStyles: '=?placeholderStyles'
             },
             controller: ['$scope', '$http', function($scope, $http) {
 
                 $scope.loadComplete = false;
 
-                if ($scope.givenStyles == null) {
-                    $scope.styles = {};
-                } else {
+                if ($scope.placeholderStyles != null) {
+                    $scope.styles = JSON.parse(JSON.stringify($scope.placeholderStyles));
+                } else if ($scope.givenStyles != null) {
                     $scope.styles = JSON.parse(JSON.stringify($scope.givenStyles));
+                } else {
+                    $scope.styles = {};
                 }
                 if ($scope.styles['background-size'] == null)
                     $scope.styles['background-size'] = 'cover';
@@ -28,10 +34,9 @@
                     $scope.styles['left'] = '0px';
                 if ($scope.styles['right'] == null)
                     $scope.styles['right'] = "0px";
-                if ($scope.styles['height'] == null)
-                    $scope.styles['height'] = "100%";
+                if ($scope.styles['bottom'] == null)
+                    $scope.styles['bottom'] = "0px";
 
-                $scope.fullImageStyles = JSON.parse(JSON.stringify($scope.styles));
                 $scope.styles['background-image'] = 'url('+$scope.placeholder+')';
 
                 setTimeout(function () {
@@ -47,6 +52,24 @@
                     var reader = new FileReader();
 
                     reader.addEventListener("load", function () {
+                        if ($scope.givenStyles == null) {
+                            $scope.newStyles = {};
+                        } else {
+                            $scope.newStyles = JSON.parse(JSON.stringify($scope.givenStyles));
+                        }
+                        if ($scope.newStyles['background-size'] == null)
+                            $scope.newStyles['background-size'] = 'cover';
+                        if ($scope.newStyles['position'] == null)
+                            $scope.newStyles['position'] = 'absolute';
+                        if ($scope.newStyles['top'] == null)
+                            $scope.newStyles['top'] = '0px';
+                        if ($scope.newStyles['left'] == null)
+                            $scope.newStyles['left'] = '0px';
+                        if ($scope.newStyles['right'] == null)
+                            $scope.newStyles['right'] = "0px";
+                        if ($scope.newStyles['bottom'] == null)
+                            $scope.newStyles['bottom'] = "0px";
+                        $scope.fullImageStyles = JSON.parse(JSON.stringify($scope.newStyles));
                         $scope.fullImageStyles['background-image'] = 'url('+reader.result+')';
                         $scope.loadComplete = true;
                         $scope.$apply();
@@ -56,8 +79,8 @@
                 });
 
             }],
-            template:   '<div ng-style="styles"></div><div class="fadeIn" ng-if="loadComplete" ng-style="fullImageStyles"></div>' +
-            '<style>.fadeIn.ng-enter { -webkit-transition: 0.5s linear all; transition:0.5s linear all; opacity:0;} .fadeIn.ng-enter.ng-enter-active { opacity:1; } </style>'
+            template:   '<div ng-style="styles"></div><div class="ngbgloaderFadeIn" ng-if="loadComplete" ng-style="fullImageStyles"></div>' +
+            '<style>.ngbgloaderFadeIn.ng-enter { -webkit-transition: 0.5s linear all; transition:0.5s linear all; opacity:0;} .ngbgloaderFadeIn.ng-enter.ng-enter-active { opacity:1; } </style>'
         };
     });
 

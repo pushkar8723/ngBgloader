@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Background Loader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            color: #2d3d4b;
+        }
+
+        .tiles {
+            position: relative;
+            float: left;
+            margin: 1.25%;
+            padding: 3px;
+            width: 22%;
+            text-align: center;
+        }
+
+        .tiles > div {
+            height: 150px;
+            width: 100%;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        a, a:hover, a:active, a:focus {
+            text-decoration: none;
+            color: #2d3d4b;
+        }
+    </style>
+    <!-- Angular Material style sheet (Not required for ngBgloader)-->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+</head>
+<body ng-app="demoApp" ng-cloak>
+<md-content>
+    <div style="height: 400px; position: relative;">
+        <bg-loader
+                placeholder="'data:image/gif;base64,R0lGODlhIQAOAMYGADhGUb2PaI+wzqWwj5eigsnTn////3N/bxQfKMKWcs6nh87XoqR2zmJvaqSrsY+QiuyxodHbplVmcOG7lGKyLUJQV4eUesvP0/knXhx1u7iIX2JaVJqxOK3N673Dx2l5iLjTSobZLkKSnkpYYcbOm7K+lk5mRZd9dSc1Q+xidajBR+Xn6HiFkF6ZymuDQpGpSmFzQ86ZtJQyVcujgrC3u9Lji3WOpe/11tTfqYunwdvp9vj36cPXcVA5TpWfo7eGwsQcV9e4lYKYStMqW8javcnbgPP09cedesDMnrHMSOZ9gOKVi+CoqJ681+rw9j2IxPU8ZzByeqaRfKnK6J63So+327TJYJ/B4c/dlo+cgs/dtJvIQOCmkr2ihdSuidnLodRFaLDFWbDP5duykM2lhNvBndjb3qTF4qG7dbvHm7zU0Cl8vsmkhdLqJcjQneiaV822lX2hmubMq/HAlvv89MTPoMqkgau95vn5+cqri4C+N8Ogg+zu7zhDQC09S9bhqiH+EUNyZWF0ZWQgd2l0aCBHSU1QACwAAAAAIQAOAAAHRYB/goOEhYaHiImKi4okjI+QkZB+lJSSigYglZYkjpeCfgKDm35AhB2XoX5/IIIIhAZ/fl1dn7a3nbeSnZ66h72+wcKFgQA7'"
+                src="'https://raw.githubusercontent.com/pushkar8723/ngBgloader/gh-pages/images/3330x1410-developer-hero.gif'"
+                styles="{'background-position-y':'50%'}"
+        ></bg-loader>
+        <div style="position: absolute; bottom: 0; width: 100%; text-align: center;">
+            <h1 style="margin-bottom: 10px;">Angular Background Loader</h1>
+            <h4>Efficient way to load large images</h4>
+        </div>
+    </div>
+    <div style="position: relative;">
+        <md-whiteframe class="tiles md-whiteframe-1dp">
+            <div>
+                <bg-loader
+                        placeholder="'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAA7klEQVR4Ae3Xv0qHUBTA8W8QBG71BE0ijj1DQ48hOPYQPkWbg2/wU4eWXqHVoaknSMQ/NETcICgOknK53jt1vmc7gx84gyje07SEmhHjODMtyf7jB8zBGfaIGuNhGjYbvQATmxlPo4ACCiiggO2UVCGBZy6I6EIBb1wDkLIcB0oeVptP7vgpcwbEKc55kjsKZJUzIE5xycvv7pEzZBGdKyBPEdN/7165Yl3K4gYUyG754J0b/ipzAdangHtytqqwB+QprIvosAfEKexLWeyBHJey//A2nUN//LZegFPYH5CeGPaIhunAcU7EeE7TvgBDCFYGgjAJXwAAAABJRU5ErkJggg=='"
+                        src="'https://raw.githubusercontent.com/pushkar8723/ngBgloader/gh-pages/images/blog-hero.jpg'"
+                        placeholder-styles="{'background-size': 'auto', 'background-position':'center', 'background-repeat': 'no-repeat'}"
+                ></bg-loader>
+            </div>
+            Generic Placeholder Image
+        </md-whiteframe>
+        <md-whiteframe class="tiles md-whiteframe-1dp">
+            <div>
+                <bg-loader
+                        placeholder="'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAA7klEQVR4Ae3Xv0qHUBTA8W8QBG71BE0ijj1DQ48hOPYQPkWbg2/wU4eWXqHVoaknSMQ/NETcICgOknK53jt1vmc7gx84gyje07SEmhHjODMtyf7jB8zBGfaIGuNhGjYbvQATmxlPo4ACCiiggO2UVCGBZy6I6EIBb1wDkLIcB0oeVptP7vgpcwbEKc55kjsKZJUzIE5xycvv7pEzZBGdKyBPEdN/7165Yl3K4gYUyG754J0b/ipzAdangHtytqqwB+QprIvosAfEKexLWeyBHJey//A2nUN//LZegFPYH5CeGPaIhunAcU7EeE7TvgBDCFYGgjAJXwAAAABJRU5ErkJggg=='"
+                        src="'https://raw.githubusercontent.com/pushkar8723/ngBgloader/gh-pages/images/hero_1.jpg'"
+                        placeholder-styles="{'background-size': 'auto', 'background-position':'center', 'background-repeat': 'no-repeat'}"
+                ></bg-loader>
+            </div>
+            Generic Placeholder Image
+        </md-whiteframe>
+        <md-whiteframe class="tiles md-whiteframe-1dp">
+            <div>
+                <bg-loader
+                        placeholder="'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4QCARXhpZgAASUkqAAgAAAAEABoBBQABAAAAPgAAABsBBQABAAAARgAAACgBAwABAAAAAgAAAGmHBAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAAAAwAAkAcABAAAADAyMTAAoAcABAAAADAxMDABoAMAAQAAAP//AAAAAAAA/+ECcGh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLyc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiB4bWxuczpleGlmPSdodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyc+CiAgPGV4aWY6WFJlc29sdXRpb24+NzI8L2V4aWY6WFJlc29sdXRpb24+CiAgPGV4aWY6WVJlc29sdXRpb24+NzI8L2V4aWY6WVJlc29sdXRpb24+CiAgPGV4aWY6UmVzb2x1dGlvblVuaXQ+SW5jaDwvZXhpZjpSZXNvbHV0aW9uVW5pdD4KICA8ZXhpZjpFeGlmVmVyc2lvbj5FeGlmIFZlcnNpb24gMi4xPC9leGlmOkV4aWZWZXJzaW9uPgogIDxleGlmOkZsYXNoUGl4VmVyc2lvbj5GbGFzaFBpeCBWZXJzaW9uIDEuMDwvZXhpZjpGbGFzaFBpeFZlcnNpb24+CiAgPGV4aWY6Q29sb3JTcGFjZT5VbmNhbGlicmF0ZWQ8L2V4aWY6Q29sb3JTcGFjZT4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KPD94cGFja2V0IGVuZD0ncic/Pgr/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wgARCAAIABIDAREAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABwb/xAAWAQADAAAAAAAAAAAAAAAAAAACAwX/2gAMAwEAAhADEAAAAYOdTfBIter/xAAaEAACAgMAAAAAAAAAAAAAAAACBQEDBBES/9oACAEBAAEFArG3RtHI2LpxG2//xAAaEQACAgMAAAAAAAAAAAAAAAAAAgEhAxIT/9oACAEDAQE/Acjo9IRstsdoP//EABsRAAICAwEAAAAAAAAAAAAAAAECAAMUITFh/9oACAECAQE/Aaq3UkvyFVOhMf2f/8QAIBAAAgAFBQEAAAAAAAAAAAAAAgMAAQQhIhEUMVFxk//aAAgBAQAGPwKk2iZA1RyPQR64h5UqCK2Mzxv5F0q+kf/EABkQAQEBAAMAAAAAAAAAAAAAAAERACGR0f/aAAgBAQABPyGtBLcq6zreObVouvVt5XP/2gAMAwEAAgADAAAAEGP/AP/EAB0RAAEDBQEAAAAAAAAAAAAAABEAATEhUWGRwfD/2gAIAQMBAT8Qp2XM257bySLEv//EABkRAAIDAQAAAAAAAAAAAAAAAAFhESHwEP/aAAgBAgEBPxChOFPZExMBly//xAAaEAEBAQADAQAAAAAAAAAAAAABESEAMUGR/9oACAEBAAE/EEbmLAkLWVWF3zCAKYRawVCgrqlSdbwJ1qBV9WQ+HP/Z'"
+                        src="'https://raw.githubusercontent.com/pushkar8723/ngBgloader/gh-pages/images/hero2.jpg'"
+                ></bg-loader>
+            </div>
+            Blurred Placeholder Image
+        </md-whiteframe>
+        <md-whiteframe class="tiles md-whiteframe-1dp">
+            <div>
+                <bg-loader
+                        placeholder="'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4QCARXhpZgAASUkqAAgAAAAEABoBBQABAAAAPgAAABsBBQABAAAARgAAACgBAwABAAAAAgAAAGmHBAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAAAAwAAkAcABAAAADAyMTAAoAcABAAAADAxMDABoAMAAQAAAP//AAAAAAAA/+EDvGh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLyc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiB4bWxuczp4bXBNTT0naHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyc+CiAgPHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD45OTkxRjJDQ0I3NzUwQTAwOUE3MTI5MTIwQzdBRkZGNTwveG1wTU06T3JpZ2luYWxEb2N1bWVudElEPgogIDx4bXBNTTpJbnN0YW5jZUlEPnhtcC5paWQ6MThCMzI3RTUxQkY1MTFFNUJGRTFGMTNDOEFBQjI5RjY8L3htcE1NOkluc3RhbmNlSUQ+CiAgPHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD45OTkxRjJDQ0I3NzUwQTAwOUE3MTI5MTIwQzdBRkZGNTwveG1wTU06T3JpZ2luYWxEb2N1bWVudElEPgogIDx4bXBNTTpEb2N1bWVudElEIHJkZjpyZXNvdXJjZT0neG1wLmRpZDoxOEIzMjdFNjFCRjUxMUU1QkZFMUYxM0M4QUFCMjlGNicgLz4KICA8eG1wTU06SW5zdGFuY2VJRD54bXAuaWlkOjE4QjMyN0U1MUJGNTExRTVCRkUxRjEzQzhBQUIyOUY2PC94bXBNTTpJbnN0YW5jZUlEPgogIDx4bXBNTTpEZXJpdmVkRnJvbSByZGY6cGFyc2VUeXBlPSdSZXNvdXJjZSc+CiAgPC94bXBNTTpEZXJpdmVkRnJvbT4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24geG1sbnM6eG1wPSdodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvJz4KICA8eG1wOkNyZWF0b3JUb29sPkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IChXaW5kb3dzKTwveG1wOkNyZWF0b3JUb29sPgogPC9yZGY6RGVzY3JpcHRpb24+Cgo8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSdyJz8+Cv/bAEMAAwICAwICAwMDAwQDAwQFCAUFBAQFCgcHBggMCgwMCwoLCw0OEhANDhEOCwsQFhARExQVFRUMDxcYFhQYEhQVFP/bAEMBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/CABEIAA0AEwMBEQACEQEDEQH/xAAXAAADAQAAAAAAAAAAAAAAAAADBQYH/8QAGAEBAAMBAAAAAAAAAAAAAAAAAwACBAH/2gAMAwEAAhADEAAAAcpOrihziKfI45xoGr//xAAaEAACAwEBAAAAAAAAAAAAAAABAgADBBMi/9oACAEBAAEFAszmX9q47Bnz7HzEXtYEo8f/xAAcEQACAQUBAAAAAAAAAAAAAAAAEQIBAxITMVH/2gAIAQMBAT8BlFmr0xGuHSNt0P/EABsRAAICAwEAAAAAAAAAAAAAAAABAhIDITIR/9oACAECAQE/AbeCzqXLLsnjv0yihtDns//EAB8QAQACAQMFAAAAAAAAAAAAAAEAAhEDIaESEyJBYf/aAAgBAQAGPwIDiFtQxt7tFj2sUU6c/IUXxhvxP//EABwQAQEAAgIDAAAAAAAAAAAAAAERACExQWFxkf/aAAgBAQABPyEz6E5ZJ3FqWbLL4w4GlyBqJFa5N41Jp0/cNUgQe2f/2gAMAwEAAgADAAAAEF1fP//EABgRAQEBAQEAAAAAAAAAAAAAAAEAETEh/9oACAEDAQE/EJhHxBORs4l4Yxdv/8QAHBEAAwABBQAAAAAAAAAAAAAAAAERIUFRcYHw/9oACAECAQE/EHOtiSU4FHIlVZzO2ehsa3kOqn//xAAfEAEBAAICAQUAAAAAAAAAAAABEQAxIUHRUWFxgZH/2gAIAQEAAT8QBtVYJV8AdvnCcNZK1QEpV1sLvlxbYMC47vgpmbK2QfbjSjDOwagHkv6+rnBbNQilefvP/9k='"
+                        src="'https://raw.githubusercontent.com/pushkar8723/ngBgloader/gh-pages/images/notgenericherobg.jpg'"
+                ></bg-loader>
+            </div>
+            Blurred Placeholder Image
+        </md-whiteframe>
+    </div>
+    <div style="text-align: center;">
+        <b>Note :</b> It enhances readability of page as text are not pushed down when images starts to load,<br/>
+        giving consistent layout to page and better user experience.
+    </div>
+    <hr style="border: none; border-top: 1px solid #e2e2e2; margin-top: 20px;" />
+    <div style="padding: 10px 10px 15px 10px; font-size: 12px">
+        <a href="https://github.com/pushkar8723/ngBgloader" style="float: right;">Source on Github</a>
+        © 2016 Pushkar Anand
+    </div>
+</md-content>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+
+<script src="../src/ngbgloader.js"></script>
+<script type="text/javascript">
+    var demoApp = angular.module('demoApp', ['ngBgloader']);
+</script>
+
+</body>
+</html>
