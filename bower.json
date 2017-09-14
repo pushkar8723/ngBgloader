@@ -24,7 +24,6 @@
     "tests"
   ],
   "dependencies": {
-    "ngAnimate": "*",
     "angular": "~1.5.6"
   }
 }
